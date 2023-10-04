@@ -6,7 +6,7 @@
 #    By: grobert <georgerobert147@gmail.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/08 21:09:42 by grobert           #+#    #+#              #
-#    Updated: 2023/09/16 19:13:43 by grobert          ###   ########.fr        #
+#    Updated: 2023/10/05 02:25:59 by grobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ OBJ		= $(SRC:%.c=%.o)
 
 CC		= gcc
 FLAGS	= -Wall -Wextra -Werror
-MLX		= mlx/libmlx.a -Lmlx -lXext -lX11 -lm
+MLX		= -Lminilibx/ -lmlx -framework OpenGL -framework AppKit
 RM		= rm -f
 
 RED		= \033[0;31m
@@ -36,7 +36,7 @@ RESET	= \033[0;0m
 $(NAME): $(OBJ)
 	@printf "\r\033[K$(GREEN)cub3d compiled$(RESET)\n"
 	@printf "$(GREEN)Compiling minilibx...$(RESET)"
-	@make -C mlx 1>/dev/null 2>&1
+	@make -C minilibx 1>/dev/null 2>&1
 	@printf "\r\033[K$(GREEN)minilibx compiled$(RESET)\n"
 	@$(CC) $(FLAGS) $(OBJ) $(MLX) -o $(NAME)
 	@printf "$(BLUE)cub3d created successfully\n$(RESET)"

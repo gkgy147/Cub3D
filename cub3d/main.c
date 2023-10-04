@@ -6,7 +6,7 @@
 /*   By: grobert <georgerobert147@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:08:41 by grobert           #+#    #+#             */
-/*   Updated: 2023/09/16 18:53:37 by grobert          ###   ########.fr       */
+/*   Updated: 2023/10/05 02:00:16 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_hook(t_game *game)
 {
-	mlx_hook(game->win, 10, 1L << 21, focus, game);
-	mlx_hook(game->win, 2, 1L << 0, key_down, game);
-	mlx_hook(game->win, 3, 1L << 1, key_up, game);
+	mlx_hook(game->win, 10, 0, focus, game);
+	mlx_hook(game->win, 2, 0, key_down, game);
+	mlx_hook(game->win, 3, 0, key_up, game);
 	mlx_hook(game->win, 17, 0, ft_close, game);
-	mlx_hook(game->win, 6, 1L << 6, ft_mouse, game);
+	mlx_hook(game->win, 6, 0, ft_mouse, game);
 }
 
 int	ft_game(void *param)
