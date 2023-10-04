@@ -6,7 +6,7 @@
 /*   By: grobert <georgerobert147@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:08:41 by grobert           #+#    #+#             */
-/*   Updated: 2023/10/05 02:00:16 by grobert          ###   ########.fr       */
+/*   Updated: 2023/10/05 02:54:52 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	main(int ac, char **av)
 	}
 	game.win = mlx_new_window(game.mlx, WIDTH, HEIGHT, "Cub3D");
 	game.img = mlx_new_image(game.mlx, WIDTH, HEIGHT);
-	game.addr = mlx_get_data_addr(game.img, &game.bpp,
+	game.addr = mlx_get_data_address(game.img, &game.bpp,
 			&game.ll, &game.endian);
 	ft_draw(&game);
 	mlx_do_sync(game.mlx);

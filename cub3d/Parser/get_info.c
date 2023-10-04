@@ -6,7 +6,7 @@
 /*   By: grobert <georgerobert147@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 19:28:38 by grobert           #+#    #+#             */
-/*   Updated: 2023/10/04 09:31:22 by grobert          ###   ########.fr       */
+/*   Updated: 2023/10/05 02:56:11 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,16 +51,16 @@ void	ft_get_pos(t_game *game, int y)
 void	ft_get_data(t_game *game)
 {
 	if (game->no.img)
-		game->no.addr = mlx_get_data_addr(game->no.img, &game->no.bpp,
+		game->no.addr = mlx_get_data_address(game->no.img, &game->no.bpp,
 				&game->no.ll, &game->no.endian);
 	if (game->so.img)
-		game->so.addr = mlx_get_data_addr(game->so.img, &game->so.bpp,
+		game->so.addr = mlx_get_data_address(game->so.img, &game->so.bpp,
 				&game->so.ll, &game->so.endian);
 	if (game->we.img)
-		game->we.addr = mlx_get_data_addr(game->we.img, &game->we.bpp,
+		game->we.addr = mlx_get_data_address(game->we.img, &game->we.bpp,
 				&game->we.ll, &game->we.endian);
 	if (game->ea.img)
-		game->ea.addr = mlx_get_data_addr(game->ea.img, &game->ea.bpp,
+		game->ea.addr = mlx_get_data_address(game->ea.img, &game->ea.bpp,
 				&game->ea.ll, &game->ea.endian);
 	return ;
 }

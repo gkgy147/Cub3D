@@ -6,7 +6,7 @@
 /*   By: grobert <georgerobert147@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:09:17 by grobert           #+#    #+#             */
-/*   Updated: 2023/10/04 23:35:35 by grobert          ###   ########.fr       */
+/*   Updated: 2023/10/05 02:51:10 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <sys/time.h>
-# include "mlx/mlx.h"
+# include "minilibx/mlx.h"
 
 typedef struct s_vect
 {

@@ -6,7 +6,7 @@
 /*   By: grobert <georgerobert147@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:12:33 by grobert           #+#    #+#             */
-/*   Updated: 2023/09/16 19:09:13 by grobert          ###   ########.fr       */
+/*   Updated: 2023/10/05 02:56:48 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int	ft_parser(t_game *game)
 	game->map.w = (game->pars.width - 1) * BLOCK;
 	game->map.h = game->pars.height * BLOCK;
 	game->map.img = mlx_new_image(game->mlx, game->map.w, game->map.h);
-	game->map.addr = mlx_get_data_addr(game->map.img, &game->map.bpp,
+	game->map.addr = mlx_get_data_address(game->map.img, &game->map.bpp,
 			&game->map.ll, &game->map.endian);
 	return (0);
 }

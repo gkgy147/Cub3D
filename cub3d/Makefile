@@ -6,7 +6,7 @@
 #    By: grobert <georgerobert147@gmail.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/08 21:09:42 by grobert           #+#    #+#              #
-#    Updated: 2023/10/05 02:25:59 by grobert          ###   ########.fr        #
+#    Updated: 2023/10/05 02:57:48 by grobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ clean:
 
 fclean: clean
 	@printf "$(RED)Cleaning minilibx...$(RESET)"
-	@make clean -C mlx 1>/dev/null 2>&1
+	@make clean -C minilibx 1>/dev/null 2>&1
 	@printf "\r\033[K$(RED)minilibx cleaned$(RESET)\n"
 	@printf "$(RED)Removing program executable...$(RESET)"
 	@$(RM) $(NAME)
