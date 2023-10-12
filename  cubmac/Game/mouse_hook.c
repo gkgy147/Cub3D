@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mouse_hook.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grobert <grobert@student.42.fr>            +#+  +:+       +#+        */
+/*   By: grobert <georgerobert147@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 18:59:53 by grobert           #+#    #+#             */
-/*   Updated: 2023/10/06 15:40:42 by grobert          ###   ########.fr       */
+/*   Updated: 2023/10/12 07:27:34 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,12 @@ void	ft_rotate(t_game *game, int type, double rad)
 	return ;
 }
 
+/*
+2 * M_PI / (double) WIDTH calculates the angle increment 
+per horizontal pixel on the screen,
+which can be used to control how much the player's 
+view rotates when moving the mouse horizontally.
+*/
 int	ft_mouse(int x, int y, void *param)
 {
 	t_game	*game;
