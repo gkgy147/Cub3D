@@ -6,7 +6,7 @@
 /*   By: grobert <georgerobert147@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 19:53:04 by grobert           #+#    #+#             */
-/*   Updated: 2023/09/16 19:06:49 by grobert          ###   ########.fr       */
+/*   Updated: 2023/10/12 07:05:52 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ int	ft_check_info(t_game *game)
 	if (game->pos.x == -1 || game->pos.y == -1
 		|| (!game->dir.x && !game->pos.y))
 		return (ft_error(PL_MISS, 6));
-	//if (!game->dr.img)
-	//	return (ft_error(DR_MISS, 7));
 	i = -1;
 	while (++i < 3)
 		if (game->f[i] > 255 || game->c[i] > 255)
@@ -49,6 +47,10 @@ int	ft_check_num(const char *num)
 	return (0);
 }
 
+/*
+In the case of any non leading whitespaces,
+the only acceptable characters adjacent to the space are '1’s or ’ 's.
+*/
 int	ft_space_cmp(const char *s1, const char *s2)
 {
 	int	i;
@@ -71,6 +73,10 @@ int	ft_space_cmp(const char *s1, const char *s2)
 DESCRIPTION
 this function makes sure that every line starts and ends
 with ones and/or spaces
+If strlen(curr_row) > strlen(row_on_top) && current col > strlen(row_on_top),
+ current character should be ‘1’
+If strlen(curr_row) > strlen(row_on_bottom) && current col > strlen(row_on_bottom),
+ current character should be ‘1’
 */
 int	ft_check_se(const char *s1, const char *s2)
 {
@@ -128,8 +134,6 @@ int	ft_check_mat(t_pars *pars)
 			return (33);
 		if (j < pars->height - 1 && ft_check_se(pars->mat[j + 1], pars->mat[j]))
 			return (34);
-		//if (j && j < pars->height - 1 && ft_check_door(pars, j))
-		//	return (35);
 	}
 	return (0);
 }
